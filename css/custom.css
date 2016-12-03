@@ -1,0 +1,10 @@
+
+tbody td { vertical-align: middle;}
+tbody td .btn { margin: 1px 0;}
+
+.carousel-control { background: none !important; height: 20px; position: absolute; top: 30px; width: 30px; }
+.carousel-control .glyphicon { position: static}
+.carousel-control.left { right: 30px; left: auto;}
+.carousel .item h2 { display: inline-block; vertical-align: middle; }
+.carousel .item .btn-add { vertical-align: text-top; }
+.btn{margin: 2px !important;}

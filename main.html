@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <title>Controle Financeiro</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+<div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Controle Financeiro</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-7">
+
+                <div id="carousel-example-generic" class="carousel slide" data-pause="true" id="myCarousel">
+                    <div id="itens-carrousel" class="carousel-inner" role="listbox">
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-xs-5">
+                <h2>Gasto Mensal</h2>
+                <div class="panel panel-default">
+                    <div id="container" class="panel-body" >
+                        Grafico aqui...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+ <!-- Modal adicionar dívida -->
+    <div id="smallModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 id="title-modal" class="modal-title">Nova despesa</h4>
+                </div>
+                <form action="#" role="form" id="wizard">
+                <div class="modal-body">
+                    <!-- ID da dívida para saber se é edição. -->
+                    <input id="divida-id" type="hidden" name="id" >
+                        <label>Mês</label>
+                          <select class="form-control" id="mes">
+                            <option>Janeiro</option>
+                            <option>Fevereiro</option>
+                            <option>Março</option>
+                            <option>Abril</option>
+                            <option>Maio</option>
+                            <option>Junho</option>
+                            <option>Julho</option>
+                            <option>Agosto</option>
+                            <option>Setembro</option>
+                            <option>Outubro</option>
+                            <option>Novembro</option>
+                            <option>Dezembro</option>
+                          </select>
+                    
+                	<label>Descrição </label>
+                        <input id="descricao" type="text" class="form-control">
+
+                    <label>Valor </label>
+                        <input id="valor" type="text" class="form-control">
+
+                    <label>Vencimento </label>
+                        <input id="data-vencimento" value="" type="text" class="form-control">
+
+                    <label>Categoria</label>
+                          <select class="form-control" id="categoria">
+                          </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button id="button-ok" type="submit" class="btn btn-primary">OK</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal adicionar dívida -->
+</body>
+
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="models/Divida.js"></script>
+<script type="text/javascript" src="models/Categoria.js"></script>
+<script type="text/javascript" src="js/helper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/database.js"></script>
+ <script src="js/grafico.js"></script> 
+<!-- Highcharts -->
+ <script src="js/highcharts.js"></script>
+<script src="js/highcharts-module-export.js"></script> 
+</script>
+</html>

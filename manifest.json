@@ -1,0 +1,33 @@
+{
+	// Obrigatório
+	"manifest_version": 2,
+	"name": "Controle Financeiro",
+	"version": "1.0",
+
+	// Descrição da nossa extensão
+	"description": "Controle suas contas de forma simples, colocando valores de entrada mensal e gastos.",
+
+	// Íconea da nossa extensão
+	"icons": {
+		"48": "icon_48.png"
+	},
+
+	// Utilizaremos as "Page Actions" e registramos isso aqui
+    "browser_action": {
+    "popup": "main.html"
+  },
+
+    // Aqui declaramos as permirsões que precisamos
+    "permissions": [ 
+        "tabs",
+        "declarativeContent",
+        "storage",
+        "notifications" 
+    ],
+
+    // Utilizaremos uma "Event Page" (note o persistent: false)
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}
